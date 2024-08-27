@@ -3,6 +3,7 @@
 This is a simple To-Do List web application built using HTML, CSS, and JavaScript. The app allows users to create, manage, and track their daily tasks efficiently. All tasks are saved in the browser's local storage, ensuring that your to-dos persist even after refreshing or closing the browser.
 
 ## Project Link
+[Jump to the Project](https://todoappdevpritx.netlify.app/)
 
 ## Features
 
@@ -16,7 +17,7 @@ This is a simple To-Do List web application built using HTML, CSS, and JavaScrip
 
 1. Clone the repository:
    ```bash
-   git clone
+   git clone https://github.com/DevPritX/TodoApp.git
    ```
 2. Open the index.html file in your web browser.
 3. Start adding your tasks!
