@@ -1,0 +1,248 @@
+/* Importing Google Font 'Poppins' */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Resetting default margins, paddings, and setting box-sizing to border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the body with full viewport height, background gradient, and center alignment */
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Styling the main container of the TODO app */
+#todoContainer {
+  padding: 10px 20px;
+  margin-top: 50px;
+  width: 500px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f4f8ff;
+  border-radius: 12px;
+  box-shadow: 6px 7px 20px -1px #00000080;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+/* Styling the heading section with title and image */
+#todoHeading {
+  margin-bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: 800;
+  font-size: 20px;
+  align-self: start;
+  cursor: none;
+}
+
+/* Styling the image in the heading */
+#todoHeading img {
+  height: 25px;
+  object-fit: cover;
+}
+
+/* Styling the form for task input */
+#taskInputHandler {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+/* Styling the label for the task input field */
+#taskInputHandler label {
+  position: absolute;
+  z-index: 999;
+  left: 30px;
+  top: -15px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  background: #f4f8ff;
+  color: #ff5b1f;
+}
+
+/* Styling the task input field */
+#taskInput {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+  background: #f4f8ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  outline: none;
+  border: 2px solid #ff5b1f;
+  cursor: text;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/* Styling the placeholder text in the input field */
+#taskInput::placeholder {
+  color: #242424a8;
+}
+
+/* Styling the button used to add tasks */
+button {
+  all: unset;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  width: 120px;
+  height: 100%;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff5b1f;
+  color: #f4f8ff;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+}
+
+/* Hover effect for the Add button */
+button:hover {
+  background: #ce3903;
+}
+
+/* Styling the container where tasks will be displayed */
+#todo-container {
+  width: 100%;
+  max-height: 250px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+#todo-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling individual todo items */
+.todo {
+  padding: 0 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+}
+
+/* Styling the status indicator for todo items */
+.status {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 2px solid;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* Styling the task text */
+.task {
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Styling the delete button */
+.delete {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+}
+
+/* Styling the icon inside the delete button */
+.delete i {
+  pointer-events: none;
+}
+
+/* Hover effect for the delete button */
+.delete:hover {
+  background: #00000031;
+}
+
+/* Styling for todo items marked as completed (with 'active' class) */
+.active {
+  background: #96ffc291;
+  border: 1px solid #2ad67291;
+}
+
+.active .status {
+  background: #12ff75d8;
+  border-color: #04e26091;
+}
+
+.active .task {
+  color: #12ff75d8;
+  text-decoration: line-through;
+}
+
+.active .delete {
+  color: #12ff75d8;
+}
+
+.active .delete:hover {
+  background: #5effa150;
+}

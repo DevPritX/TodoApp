@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link to external JavaScript file, defer to load after HTML -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- Main container for the To-Do App -->
+    <div id="todoContainer">
+      <!-- Heading section with title and image -->
+      <div id="todoHeading">
+        <span>To-Do List</span>
+        <img src="./notebook.png" alt="notebook" />
+      </div>
+
+      <!-- Form to handle new task input -->
+      <form id="taskInputHandler">
+        <!-- Input field for adding new tasks -->
+        <input
+          type="text"
+          name="taskInput"
+          id="taskInput"
+          placeholder="Add your task"
+          required
+        />
+        <!-- Label for the task input field -->
+        <label for="taskInput">Add your task</label>
+        <!-- Button to submit the form and add a new task -->
+        <button id="addBtn">Add</button>
+      </form>
+
+      <!-- Container where the to-do items will be displayed -->
+      <div id="todo-container"></div>
+    </div>
+  </body>
+</html>
